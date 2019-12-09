@@ -2,7 +2,6 @@
 App appears not to work correctly when doctype is specified
 -->
 <html>
-    <head>
         <meta charset="UTF-8">
         <title>Four in a Row with Treehouse</title>
         <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet">
@@ -15,13 +14,10 @@ App appears not to work correctly when doctype is specified
 			Start Game Button
 			When a player clicks this button, the game will begin
 		-->
-    	<button id="begin-two-player">
-    		Two Player
+    	<button id="begin-game">
+    		Start
     	</button>
 
-        <button id="begin-single-player">
-    		Single Player
-    	</button>
 
 		<!--
 			#game-scene: container for entire play area
@@ -99,7 +95,17 @@ App appears not to work correctly when doctype is specified
         <div class="table">
         </div>
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="src/classes/Game.js"></script>
+    <script src="src/classes/Board.js"></script>
+    <script src="src/classes/Space.js"></script>
+    <script src="src/classes/Player.js"></script>
+    <script src="src/classes/Computer.js"></script>
+    <script src="src/classes/Token.js"></script>
+    <script src="src/app.js"></script>
 </html>
+<<<<<<< HEAD
 
 
 
@@ -111,3 +117,5 @@ App appears not to work correctly when doctype is specified
 <script src="src/classes/Player.js"></script>
 <script src="src/classes/Token.js"></script>
 <script src="src/app.js"></script>
+=======
+>>>>>>> 8123ffdd21dbdba9619cfefe17228bfac0c23b18
