@@ -3,9 +3,11 @@ class Game
 
     constructor()
     {
+        this.mode = null;
         this.board = new Board();
-        this.players = this.createPlayers();
+        this.players = null;
         this.ready = false;
+        this.players = this.createPlayers()
     }
 
 
@@ -35,7 +37,7 @@ class Game
      * Move token right, left or drop
      * @param {Object} e - Keydown event
      */
-    handleKeydown(e)
+    handleKeydown(e, callback)
     {
         if (this.ready) {
             if (e.key === 'ArrowLeft') {
@@ -43,7 +45,7 @@ class Game
             } else if (e.key === 'ArrowRight') {
                 this.activePlayer.activeToken.moveRight(this.board.columns);
             } else if (e.key === 'ArrowDown') {
-                this.playToken();
+                this.playToken()
             }
         }
     }
@@ -110,8 +112,10 @@ class Game
 
     /**
      * Initializes gameplay
+     * Set game to single player or two player
+     * Call players creator method
      */
-    startGame()
+    startGame(mode)
     {
         this.ready = true;
         this.board.drawHTMLBoard();
