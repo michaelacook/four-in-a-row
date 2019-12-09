@@ -6,13 +6,10 @@ const game = new Game();
 /**
  * Listens for click on `#begin-two-player` and calls startGame() on game object
  */
- document.addEventListener('click', function(e) {
-     if (e.target.id === 'begin-two-player') {
-         document.getElementById('begin-single-player').style.display = "none";
-         document.getElementById('begin-two-player').style.display = "none";
-         document.getElementById('play-area').style.opacity = '1';
-         game.startGame();
-     };
+ document.getElementById('begin-game').addEventListener('click', function(e) {
+     document.getElementById('begin-game').style.display = 'none';
+     document.getElementById('play-area').style.opacity = '1';
+     game.startGame();
  });
 
 
