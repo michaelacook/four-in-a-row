@@ -26,4 +26,28 @@ class Space
         svgSpace.setAttributeNS(null, "stroke", "none");
         document.getElementById("mask").appendChild(svgSpace);
     }
+
+
+    /**
+     * Update Space object to indicate it is occupied by a Token object
+     * @param {Object} Token - the dropped token
+     */
+    mark(token)
+    {
+        this.token = token;
+    }
+
+
+    /**
+     * Checks if space has an associated token to find its owner
+     * @return  {(null|Object)} Returns null or the owner object of the space's associated token
+     */
+    get owner()
+    {
+        if (this.token !== null) {
+            return this.token.owner;
+        } else {
+            return null;
+        }
+    }
 }

@@ -25,7 +25,23 @@ class Player
     }
 
 
+    /**
+     * Check if player has any undropped tokens
+     * @return {Boolean}
+     */
+    checkTokens()
+    {
+        if (this.unusedTokens.length === 0) {
+            return false;
+        }
+        return true;
+    }
 
+
+    /**
+     * Gets the first unused token
+     * @return {object} Token
+     */
     get activeToken()
     {
         return this.unusedTokens[0];

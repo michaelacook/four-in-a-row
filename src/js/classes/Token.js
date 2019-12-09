@@ -75,7 +75,6 @@ class Token
     drop(target, reset)
     {
         this.dropped = true;
-        target.token = this;
         $(this.htmlToken).animate({
             top: (target.y * target.diameter)
         }, 750, 'easeOutBounce', reset);
